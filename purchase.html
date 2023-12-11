@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Document</title>
+
+          <style>
+                    :root {
+                              --almond: #ede0d4ff;
+                              --dun: #e6ccb2ff;
+                              --tan: #ddb892ff;
+                              --chamoisee: #b08968ff;
+                              --coffee: #7f5539ff;
+                              --raw-umber: #9c6644ff;
+                    }
+
+                    
+                    * {
+                              margin: 0;
+                              padding: 0;
+                    }
+
+
+                    .header {
+                              background-color: var(--coffee);
+                              color: #fff;
+                              padding: 15px 0;
+                              text-align: center;
+                    }
+
+                    .header-container {
+                              display: flex;
+                              justify-content: space-between;
+                              align-items: center;
+                              padding: 0 20px;
+                    }
+
+                    .header nav {
+                              display: flex;
+                              gap: 20px;
+                    }
+
+                    .header .header-link {
+                              text-decoration: none;
+                              color: #fff;
+                              font-weight: 600;
+                    }
+
+                    .header .logo {
+                              display: flex;
+                              align-items: center;
+                    }
+
+                    .header .logo .logo-icon {
+                              width: 30px;
+                              height: 30px;
+                              margin-right: 10px;
+                    }
+
+                    .header .logo-text {
+                              font-size: 1.5rem;
+                              font-weight: 600;
+                    }
+
+                    .header .actions .action-button {
+                              background-color: #fff;
+                              color: #333;
+                              border: none;
+                              padding: 10px 20px;
+                              border-radius: 5px;
+                              cursor: pointer;
+                    }
+
+                    .header .action-icon {
+                              width: 20px;
+                              height: 20px;
+                              margin-left: 5px;
+                    }
+
+                    /* FORM */
+
+                    .form {
+                              background-color: var(--chamoisee); 
+                              display: flex;
+                              justify-content: center;
+                              border-radius: 0 0 1rem 1rem;
+                    }
+
+                    form {
+                              /* border: 1px solid black; */
+                              margin: 6% auto;
+                              padding: 1%;
+                              width: 50%;
+                              border-radius: 1rem;
+                              box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+                              background-color: var(--tan);
+                    }
+
+                    .input {
+                              width: auto;
+                              /* height: ; */
+                              padding: 12px 20px;
+                              margin: 8px 0;
+                              box-sizing: border-box;
+                              /* border: 1px solid black; */
+                              border-radius: 1rem;
+                              /* background-color: #fff; */
+                    }
+
+                    .name {
+                              display: flex;
+                              /* border: 1px solid black; */
+                    }
+
+                    .fname,
+                    .email {
+                              width: 100%;
+                              margin: 0 1% 0 1%;
+                    }
+
+                    .number {
+                              width: auto;
+                    }
+
+                    input,
+                    textarea {
+                              width: 100%;
+                              padding: 1rem;
+                              margin: 8px 1px;
+                              box-sizing: border-box;
+                              border: 1px solid black;
+                              border-radius: 4px;
+                              background-color: #fff;
+                    }
+
+                    label {
+                              font-weight: bold;
+                              font-size: 25px;
+                    }
+
+                    .error-message {
+                              color: #ff0000;
+                              font-size: 14px;
+                              font-weight: bold;
+                              display: block;
+                              margin: 0px 0 1%;
+                    }
+
+                    input[type=submit] {
+                              font-variant: small-caps;
+                    }
+
+                    .submit {
+                              color: white;
+                              padding: 14px 20px;
+                              margin: 8px 0;
+                              border: none;
+                              cursor: pointer;
+                              width: 30%;
+                              opacity: 0.9;
+                    }
+          </style>
+</head>
+
+<body>
+          <header class="header">
+                    <div class="header-container">
+
+                              <nav>
+                                        <a href="home.html" class="header-link">home Page</a>
+                                        <a href="drink.html" class="header-link">drinks</a>
+                                        <a href="food.html" class="header-link">food</a>
+                                        <a href="franchise.html" class="header-link">franchises</a>
+                              </nav>
+
+                              <div class="logo">
+                                        <span class="logo-text">Wild Bean's</span>
+                              </div>
+
+                              <div class="actions">
+                                        <a href="book.html" class="action-button">
+                                                  Book Table
+                                        </a>
+                              </div>
+                    </div>
+          </header>
+
+          <main>
+                    <section class="form">
+                              <form action="" id="form" onsubmit="return validateForm()">
+                                        <div class="input-container">
+                                                  <div class="name">
+                                                            <div class="fname">
+                                                                      <div class="txt">Name</div>
+
+                                                                      <div class="input">
+                                                                                <input type="text" name="name"
+                                                                                          id="name">
+                                                                      </div>
+
+                                                                      <span class="error-message"
+                                                                                id="name-error"></span>
+                                                            </div>
+
+                                                            <div class="email">
+                                                                      <div class="txt">Email</div>
+
+                                                                      <div class="input">
+                                                                                <input type="text" name="email"
+                                                                                          id="email">
+                                                                      </div>
+
+                                                                      <span class="error-message"
+                                                                                id="email-error"></span>
+                                                            </div>
+                                                  </div>
+
+                                                  <div class="number">
+                                                            <div class="txt">Mobile Number</div>
+
+                                                            <div class="input">
+                                                                      <input type="text" name="number" id="number">
+                                                            </div>
+
+                                                            <span class="error-message" id="number-error"></span>
+                                                  </div>
+
+                                                  <div class="email">
+                                                            <div class="txt">Address</div>
+
+                                                            <div class="input">
+                                                                      <textarea name="address" id="address" cols="30"
+                                                                                rows="10" class="address"></textarea>
+                                                            </div>
+
+                                                            <span class="error-message" id="address-error"></span>
+                                                  </div>
+
+                                                  <div class="submit">
+                                                            <div class="input">
+                                                                      <input type="submit" value="Grab IT">
+                                                            </div>
+                                                  </div>
+                                        </div>
+                              </form>
+                    </section>
+          </main>
+</body>
+
+<script>
+          function validateForm() {
+                    // Get form input values
+                    var name = document.getElementById('name').value;
+                    var email = document.getElementById('email').value;
+                    var number = document.getElementById('number').value;
+                    var address = document.getElementById('address').value;
+
+                    document.getElementById('name-error').innerHTML = '';
+                    document.getElementById('email-error').innerHTML = '';
+                    document.getElementById('number-error').innerHTML = '';
+                    document.getElementById('address-error').innerHTML = '';
+
+                    if (name === "") {
+                              document.getElementById('name-error').innerHTML = 'Name is required';
+                              return false;
+                    }
+
+                    if (email === "") {
+                              document.getElementById('email-error').innerHTML = 'Email is required';
+                              return false;
+                    } else if (!isValidEmail(email)) {
+                              document.getElementById('email-error').innerHTML = 'Invalid email format';
+                              return false;
+                    }
+
+                    if (number === "") {
+                              document.getElementById('number-error').innerHTML = 'Mobile Number is required';
+                              return false;
+                    }
+
+                    if (address === "") {
+                              document.getElementById('address-error').innerHTML = '  COD only <br> Address is required ';
+                              return false;
+                    }
+
+                    return true;
+          }
+
+          function isValidEmail(email) {
+                    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    return emailRegex.test(email);
+          }
+
+</script>
+
+
+</html>

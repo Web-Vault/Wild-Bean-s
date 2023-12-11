@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>hot drinks</title>
+
+          <style>
+                    :root {
+                              --almond: #ede0d4ff;
+                              --dun: #e6ccb2ff;
+                              --tan: #ddb892ff;
+                              --chamoisee: #b08968ff;
+                              --coffee: #7f5539ff;
+                              --raw-umber: #9c6644ff;
+                    }
+
+
+                    * {
+                              margin: 0;
+                              padding: 0;
+                    }
+
+
+                    .header {
+                              background-color: var(--coffee);
+                              color: #fff;
+                              padding: 15px 0;
+                              text-align: center;
+                    }
+
+                    .header-container {
+                              display: flex;
+                              justify-content: space-between;
+                              align-items: center;
+                              padding: 0 20px;
+                    }
+
+                    .header nav {
+                              display: flex;
+                              gap: 20px;
+                    }
+
+                    .header .header-link {
+                              text-decoration: none;
+                              color: #fff;
+                              font-weight: 600;
+                    }
+
+                    .header .logo {
+                              display: flex;
+                              align-items: center;
+                    }
+
+                    .header .logo-text {
+                              font-size: 1.5rem;
+                              font-weight: 600;
+                    }
+
+                    .header .actions .action-button {
+                              background-color: #fff;
+                              color: #222;
+                              border: none;
+                              padding: 10px 20px;
+                              border-radius: 5px;
+                              cursor: pointer;
+                    }
+
+                    /*  */
+
+                    .product-section {
+                              background-color: var(--tan);
+                              padding: 20px 0;
+                              text-align: center;
+                    }
+
+                    .product-container {
+                              display: flex;
+                              justify-content: space-between;
+                              align-items: center;
+                              padding: 0 20px;
+                    }
+
+                    .product-details {
+                              flex: 1;
+                              text-align: left;
+                              padding: 20px;
+                    }
+
+                    .product-title {
+                              font-size: 1.5rem;
+                              color: #333;
+                              margin-bottom: 10px;
+                    }
+
+                    .product-name {
+                              font-size: 2rem;
+                              font-weight: bold;
+                              color: #333;
+                              margin-bottom: 20px;
+                    }
+
+                    .product-description {
+                              font-size: 1rem;
+                              color: #666;
+                              margin-bottom: 20px;
+                    }
+
+                    .product-links {
+                              display: flex;
+                              gap: 10px;
+                    }
+
+                    .product-link {
+                              text-decoration: none;
+                              color: #333;
+                    }
+
+                    .product-info {
+                              margin-top: 20px;
+                    }
+
+                    .product-info-item {
+                              display: flex;
+                              justify-content: space-between;
+                              margin-bottom: 10px;
+                    }
+
+                    .info-label {
+                              font-weight: bold;
+                    }
+
+                    .info-value {
+                              color: #333;
+                    }
+
+                    .product-actions {
+                              display: flex;
+                              align-items: center;
+                              justify-content: space-between;
+                              margin-top: 20px;
+                    }
+
+                    .product-price {
+                              font-size: 1.5rem;
+                              font-weight: bold;
+                              color: #333;
+                    }
+
+                    .product-buy-button {
+                              background-color: var(--raw-umber);
+                              color: #fff;
+                              border: none;
+                              padding: 10px 20px;
+                              border-radius: 5px;
+                              cursor: pointer;
+                              transition: background-color 0.3s;
+
+                    }
+
+                    .product-buy-button:hover {
+                              background-color: var(--coffee);
+
+                    }
+
+                    .product-image {
+                              flex: 0.7;
+                              text-align: center;
+                    }
+
+                    .product-image img {
+                              max-width: 100%;
+                              height: auto;
+                              border: 1px solid #ccc;
+                              border-radius: 5px;
+                    }
+
+                    /*  */
+
+                    /* Apply styles to the product section */
+                    .product-section {
+                              background: var(--chamoisee);
+                              padding: 40px 0;
+                    }
+
+                    /* Style the product container */
+                    .container {
+                              max-width: 1200px;
+                              margin: 0 auto;
+                              padding: 0 15px;
+                    }
+
+                    /* Style the product list */
+                    .product-list {
+                              display: flex;
+                              /* flex-wrap: wrap; */
+                              margin: -10px;
+                    }
+
+                    /* Style individual product items */
+                    .product-item {
+                              flex: basis 25%;
+                              margin: 10px;
+                              background: var(--tan);
+                              border: 1px solid #e2e2e2;
+                              border-radius: 4px;
+                              box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                    }
+
+                    /* Style product images */
+                    .product-image {
+                              display: block;
+                              overflow: hidden;
+                              border-radius: 4px 4px 0 0;
+                    }
+
+                    .product-image img {
+                              width: 420px;
+                              height: 200px;
+                              object-fit: cover;
+                    }
+
+                    /* Style product details */
+                    .product-details {
+                              padding: 20px;
+                    }
+
+                    /* Style product category */
+                    .product-category {
+                              color: #888;
+                              font-size: 14px;
+                              text-transform: uppercase;
+                    }
+
+                    /* Style product title */
+                    .product-title {
+                              color: #333;
+                              font-size: 20px;
+                              font-weight: 600;
+                              margin: 10px 0;
+                    }
+
+                    /* Style product price */
+                    .product-price {
+                              color: #333;
+                              font-size: 18px;
+                              font-weight: 600;
+                    }
+          </style>
+</head>
+
+<body>
+          <header class="header">
+                    <div class="header-container">
+                              <nav>
+                                        <a href="home.html" class="header-link">home Page</a>
+                                        <a href="drink.html" class="header-link">drinks</a>
+                                        <a href="food.html" class="header-link">food</a>
+                                        <a href="franchise.html" class="header-link">franchises</a>
+                              </nav>
+                              <div class="logo">
+                                        <span class="logo-text">Wild Bean's</span>
+                              </div>
+                              <div class="actions">
+                                        <a href="book.html" class="action-button">
+                                                  Book Table
+                                        </a>
+                              </div>
+                    </div>
+          </header>
+
+          <section class="product-section">
+                    <div class="product-container">
+                              <div class="product-details">
+                                        <h2 class="product-title">THE WILD BEANS</h2>
+                                        <h1 class="product-name">Wild Bean's Special - Wild Hot Coffie</h1>
+                                        <p class="product-description">Embark on a sensory journey with our Cafe Noir's
+                                                  special hot coffee. Crafted with precision, our blend of premium
+                                                  Arabica beans delivers a rich, aromatic experience, enveloping you in
+                                                  a warm embrace of flavors. Each sip is a celebration of coffee
+                                                  craftsmanship, inviting you to savor the extraordinary..</p>
+                                        <div class="product-links">
+                                                  <a class="product-link">4.9 / 5.0</a>
+                                        </div>
+                                        <div class="product-info">
+                                                  <div class="product-info-item">
+                                                            <span class="info-label">taste :</span>
+                                                            <span class="info-value">delicious</span>
+                                                  </div>
+                                                  <div class="product-info-item">
+                                                            <span class="info-label">Size:</span>
+                                                            <span class="info-value">Medium</span>
+                                                  </div>
+                                                  <div class="product-info-item">
+                                                            <span class="info-label">Quantity</span>
+                                                            <span class="info-value">41</span>
+                                                  </div>
+                                        </div>
+                                        <div class="product-actions">
+                                                  <span class="product-price">$30.99</span>
+                                                  <a href="purchase.html" class="product-buy-button">Grab Now</a>
+                                        </div>
+                              </div>
+                              <div class="product-image">
+                                        <img alt="Product Image" class="product-image"
+                                                  src="image/hot-drink-main-img.jpg" />
+                              </div>
+                    </div>
+          </section>
+
+          <section class="product-section">
+                    <div class="container">
+                              <div class="product-list">
+                                        <div class="product-item">
+                                                  <a class="product-image">
+                                                            <img alt="Product Image"
+                                                                      src="image/Caramel Macchiato.jpg">
+                                                  </a>
+                                                  <div class="product-details">
+                                                            <h3 class="product-category">DRINKS</h3>
+                                                            <h2 class="product-title">Caramel Macchiato:</h2>
+                                                            <p class="product-price">$9.99</p>
+                                                  </div>
+                                        </div>
+
+                                        <div class="product-item">
+                                                  <a class="product-image">
+                                                            <img alt="Product Image"
+                                                                      src="image/Chai Latte.png">
+                                                  </a>
+                                                  <div class="product-details">
+                                                            <h3 class="product-category">DRINKS</h3>
+                                                            <h2 class="product-title">Chai Latte:</h2>
+                                                            <p class="product-price">$9.99</p>
+                                                  </div>
+                                        </div>
+
+                                        <div class="product-item">
+                                                  <a class="product-image">
+                                                            <img alt="Product Image"
+                                                                      src="image/Hazelnut Mocha.jpg">
+                                                  </a>
+                                                  <div class="product-details">
+                                                            <h3 class="product-category">DRINKS</h3>
+                                                            <h2 class="product-title">Hazelnut Mocha:</h2>
+                                                            <p class="product-price">$9.99</p>
+                                                  </div>
+                                        </div>
+
+                                        <div class="product-item">
+                                                  <a class="product-image">
+                                                            <img alt="Product Image"
+                                                                      src="image/Peppermint Hot Chocolate.png">
+                                                  </a>
+                                                  <div class="product-details">
+                                                            <h3 class="product-category">DRINKS</h3>
+                                                            <h2 class="product-title">Peppermint Hot Chocolate:</h2>
+                                                            <p class="product-price">$9.99</p>
+                                                  </div>
+                                        </div>
+                              </div>
+
+                              <div class="product-list">
+                                        <div class="product-item">
+                                                  <a class="product-image">
+                                                            <img alt="Product Image"
+                                                                      src="image/White Chocolate Raspberry Mocha.jpg">
+                                                  </a>
+                                                  <div class="product-details">
+                                                            <h3 class="product-category">DRINKS</h3>
+                                                            <h2 class="product-title">White Chocolate Raspberry Mocha:
+                                                            </h2>
+                                                            <p class="product-price">$9.99</p>
+                                                  </div>
+                                        </div>
+
+                                        <div class="product-item">
+                                                  <a class="product-image">
+                                                            <img alt="Product Image"
+                                                                      src="image/Vanilla Latte.png">
+                                                  </a>
+                                                  <div class="product-details">
+                                                            <h3 class="product-category">DRINKS</h3>
+                                                            <h2 class="product-title">Vanilla Latte:</h2>
+                                                            <p class="product-price">$9.99</p>
+                                                  </div>
+                                        </div>
+
+                                        <div class="product-item">
+                                                  <a class="product-image">
+                                                            <img alt="Product Image"
+                                                                      src="image/Turmeric Latte (Golden Milk).png">
+                                                  </a>
+                                                  <div class="product-details">
+                                                            <h3 class="product-category">DRINKS</h3>
+                                                            <h2 class="product-title">Turmeric Latte (Golden Milk):</h2>
+                                                            <p class="product-price">$9.99</p>
+                                                  </div>
+                                        </div>
+
+                                        <div class="product-item">
+                                                  <a class="product-image">
+                                                            <img alt="Product Image"
+                                                                      src="image/Irish Coffee.jpg">
+                                                  </a>
+                                                  <div class="product-details">
+                                                            <h3 class="product-category">DRINKS</h3>
+                                                            <h2 class="product-title">Irish Coffee:</h2>
+                                                            <p class="product-price">$9.99</p>
+                                                  </div>
+                                        </div>
+                              </div>
+                    </div>
+          </section>
+
+</body>
+
+</html>

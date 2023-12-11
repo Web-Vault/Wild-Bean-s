@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <!-- <link href="styles.css" rel="stylesheet"> -->
+          <title>Home Page</title>
+
+          <style>
+                    :root {
+                              --almond: #ede0d4ff;
+                              --dun: #e6ccb2ff;
+                              --tan: #ddb892ff;
+                              --chamoisee: #b08968ff;
+                              --coffee: #7f5539ff;
+                              --raw-umber: #9c6644ff;
+                    }
+
+
+                    * {
+                              margin: 0;
+                              padding: 0;
+                    }
+
+
+                    .header {
+                              background-color: var(--coffee);
+                              color: #fff;
+                              padding: 15px 0;
+                              text-align: center;
+                    }
+
+                    .header-container {
+                              display: flex;
+                              justify-content: space-between;
+                              align-items: center;
+                              padding: 0 20px;
+                    }
+
+                    .header nav {
+                              display: flex;
+                              gap: 20px;
+                    }
+
+                    .header .header-link {
+                              text-decoration: none;
+                              color: #fff;
+                              font-weight: 600;
+                    }
+
+                    .header .logo {
+                              display: flex;
+                              align-items: center;
+                    }
+
+                    .header .logo .logo-icon {
+                              width: 30px;
+                              height: 30px;
+                              margin-right: 10px;
+                    }
+
+                    .header .logo-text {
+                              font-size: 1.5rem;
+                              font-weight: 600;
+                    }
+
+                    .header .actions .action-button {
+                              background-color: #fff;
+                              color: #333;
+                              border: none;
+                              padding: 10px 20px;
+                              border-radius: 5px;
+                              cursor: pointer;
+                    }
+
+                    .header .action-icon {
+                              width: 20px;
+                              height: 20px;
+                              margin-left: 5px;
+                    }
+
+                    /*  */
+
+                    .product-section {
+                              background-color: var(--tan);
+                              padding: 20px 0;
+                              text-align: center;
+                    }
+
+                    .product-container {
+                              display: flex;
+                              justify-content: space-between;
+                              align-items: center;
+                              padding: 0 20px;
+                    }
+
+                    .product-details {
+                              flex: 1;
+                              text-align: left;
+                              padding: 20px;
+                    }
+
+                    .product-title {
+                              font-size: 1.5rem;
+                              color: #333;
+                              margin-bottom: 10px;
+                    }
+
+                    .product-name {
+                              font-size: 2rem;
+                              font-weight: bold;
+                              color: #333;
+                              margin-bottom: 20px;
+                    }
+
+                    .product-description {
+                              font-size: 1rem;
+                              color: #666;
+                              margin-bottom: 20px;
+                    }
+
+                    .product-links {
+                              display: flex;
+                              gap: 10px;
+                    }
+
+                    .product-link {
+                              text-decoration: none;
+                              color: #333;
+                    }
+
+                    .product-info {
+                              margin-top: 20px;
+                    }
+
+                    .product-info-item {
+                              display: flex;
+                              justify-content: space-between;
+                              margin-bottom: 10px;
+                    }
+
+                    .info-label {
+                              font-weight: bold;
+                    }
+
+                    .info-value {
+                              color: #333;
+                    }
+
+                    .product-actions {
+                              display: flex;
+                              align-items: center;
+                              justify-content: space-between;
+                              margin-top: 20px;
+                    }
+
+                    .product-price {
+                              font-size: 1.5rem;
+                              font-weight: bold;
+                              color: #333;
+                    }
+
+                    .product-buy-button {
+                              background-color: var(--raw-umber);
+                              color: #fff;
+                              border: none;
+                              padding: 10px 20px;
+                              border-radius: 5px;
+                              cursor: pointer;
+                              transition: background-color 0.3s;
+
+                    }
+
+                    .product-buy-button:hover {
+                              background-color: var(--coffee);
+
+                    }
+
+                    .product-image {
+                              flex: 1;
+                              text-align: center;
+                    }
+
+                    .product-image img {
+                              max-width: 90%;
+                              height: auto;
+                              border: 1px solid #ccc;
+                              border-radius: 0.251rem;
+                    }
+
+                    /*  */
+
+                    .container {
+                              width: max-content;
+                              margin: 0 auto;
+                              padding: 0 16px;
+                    }
+
+                    /* Section styles */
+                    .featured-section {
+                              padding: 4%;
+                              background-color: var(--chamoisee);
+                              color: #000;
+                              text-align: center;
+                    }
+
+                    /* Featured item styles */
+                    .featured-item {
+                              display: flex;
+                              align-items: center;
+                              justify-content: space-between;
+                              border-bottom: 1px solid #333;
+                              padding-bottom: 20px;
+                              margin: auto auto 2%;
+                              flex-basis: 70%;
+                    }
+
+                    /* Icon styles */
+                    .icon {
+                              display: flex;
+                              align-items: center;
+                              justify-content: center;
+                              width: 80px;
+                              height: 80px;
+                              background-color: #333;
+                              background-position: center;
+                              background-size: contain;
+                              border-radius: 50%;
+                              margin-right: 20px;
+                    }
+                    
+                    .drink-img {
+                              background-image: url(image/coffee-image-div-bg.png);
+                    }
+
+                    .food-img {
+                              background-image: url(image/food-image-div-bg.png);
+                    }
+
+                    .icon i {
+                              font-size: 40px;
+                              color: #3f83f8;
+                    }
+
+                    /* Item content styles */
+                    .item-content {
+                              flex-grow: 1;
+                              text-align: center;
+                    }
+
+                    .item-title {
+                              font-size: 1.5rem;
+                              font-weight: 600;
+                              margin-bottom: 16px;
+                    }
+
+                    .item-description {
+                              font-size: 1rem;
+                              line-height: 1.6;
+                              color: #333;
+                    }
+
+                    .item-link {
+                              color: #000;
+                              font-size: 1.2rem;
+                              /* text-decoration: none; */
+                    }
+
+                    /* Call to action button styles */
+                    .cta-button {
+                              display: flex;
+                              margin: 20px auto;
+                              padding: 10px 40px;
+                              background-color: #333;
+                              border: none;
+                              border-radius: 5px;
+                              color: var(--raw-umber);
+                              font-size: 1.125rem;
+                              cursor: pointer;
+                              transition: background-color 0.3s;
+                    }
+
+                    .cta-button:hover {
+                              background-color: var(--coffee);
+                    }
+          </style>
+
+</head>
+
+<body>
+
+          <header class="header">
+                    <div class="header-container">
+
+                              <nav>
+                                        <a href="home.html" class="header-link">home Page</a>
+                                        <a href="drink.html" class="header-link">drinks</a>
+                                        <a href="food.html" class="header-link">food</a>
+                                        <a href="franchise.html" class="header-link">franchises</a>
+                              </nav>
+
+                              <div class="logo">
+                                        <span class="logo-text">Wild Bean's</span>
+                              </div>
+
+                              <div class="actions">
+                                        <a href="book.html" class="action-button">
+                                                  Book Table
+                                        </a>
+                              </div>
+                    </div>
+          </header>
+
+          <section class="product-section">
+                    <div class="product-container">
+                              <div class="product-details">
+                                        <h2 class="product-title">THE WILD BEANS</h2>
+                                        <h1 class="product-name">Wild Bean's Special - Wild Coffie</h1>
+                                        <p class="product-description">Embark on a sensory journey at Cafe Wild Bean's
+                                                  with our
+                                                  special coffee blend. Meticulously curated from premium Arabica beans,
+                                                  it unveils a symphony of flavors—velvety smooth with nuanced aromas.
+                                                  Each sip is an exquisite celebration, defining our commitment to
+                                                  unparalleled coffee craftsmanship.</p>
+                                        <div class="product-links">
+                                                  <a class="product-link">4.9 / 5.0</a>
+                                        </div>
+                                        <div class="product-info">
+                                                  <div class="product-info-item">
+                                                            <span class="info-label">taste :</span>
+                                                            <span class="info-value">delicious</span>
+                                                  </div>
+                                                  <div class="product-info-item">
+                                                            <span class="info-label">Size:</span>
+                                                            <span class="info-value">Medium</span>
+                                                  </div>
+                                                  <div class="product-info-item">
+                                                            <span class="info-label">Quantity</span>
+                                                            <span class="info-value">1</span>
+                                                  </div>
+                                        </div>
+                                        <div class="product-actions">
+                                                  <span class="product-price">$30.99</span>
+                                                  <a href="purchase.html" class="product-buy-button">Grab Now</a>
+                                        </div>
+                              </div>
+                              <div class="product-image">
+                                        <img alt="Product Image" class="product-image"
+                                                  src="image/home-page-main-image.jpg" />
+                              </div>
+                    </div>
+          </section>
+
+          <section class="featured-section">
+                    <div class="container">
+                              <div class="featured-item">
+                                        <div class="icon drink-img">
+                                                  <i class="icon-star"></i>
+                                        </div>
+                                        <div class="item-content">
+                                                  <h2 class="item-title">Delicious Drinks At The Wild Bean's</h2>
+                                                  <p class="item-description">BExplore our enticing array of handcrafted
+                                                            beverages, a perfect blend of flavors that elevate your
+                                                            refreshment experience.</p><br>
+                                                  <a href="drink.html" class="item-link">Purchase Now</a>
+                                        </div>
+                              </div>
+                              <div class="featured-item">
+                                        <div class="item-content">
+                                                  <h2 class="item-title">Fabulous Food At The Wild Bean's</h2>
+                                                  <p class="item-description">Savor culinary delights at our food
+                                                            haven—where every dish is a masterpiece, meticulously
+                                                            crafted for your enjoyment.</p><br>
+                                                  <a href="food.html" class="item-link">Purchase Now</a>
+                                        </div>
+                                        <div class="icon food-img">
+                                                  <i class="icon-circles"></i>
+                                        </div>
+                              </div>
+                              <button class="cta-button">Book Table</button>
+                    </div>
+          </section>
+
+</body>
+
+</html>

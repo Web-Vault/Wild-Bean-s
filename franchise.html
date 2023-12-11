@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Document</title>
+
+          <link rel="stylesheet"
+                    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+          <style>
+                    :root {
+                              --almond: #ede0d4ff;
+                              --dun: #e6ccb2ff;
+                              --tan: #ddb892ff;
+                              --chamoisee: #b08968ff;
+                              --coffee: #7f5539ff;
+                              --raw-umber: #9c6644ff;
+                    }
+
+
+                    * {
+                              margin: 0;
+                              padding: 0;
+                    }
+
+
+                    .material-symbols-outlined {
+                              font-variation-settings:
+                                        'FILL' 0,
+                                        'wght' 400,
+                                        'GRAD' 0,
+                                        'opsz' 24
+                    }
+
+                    .header {
+                              background-color: var(--coffee);
+                              color: #fff;
+                              padding: 15px 0;
+                              text-align: center;
+                    }
+
+                    .header-container {
+                              display: flex;
+                              justify-content: space-between;
+                              align-items: center;
+                              padding: 0 20px;
+                    }
+
+                    .header nav {
+                              display: flex;
+                              gap: 20px;
+                    }
+
+                    .header .header-link {
+                              text-decoration: none;
+                              color: #fff;
+                              font-weight: 600;
+                    }
+
+                    .header .logo {
+                              display: flex;
+                              align-items: center;
+                    }
+
+                    .header .logo .logo-icon {
+                              width: 30px;
+                              height: 30px;
+                              margin-right: 10px;
+                    }
+
+                    .header .logo-text {
+                              font-size: 1.5rem;
+                              font-weight: 600;
+                    }
+
+                    .header .actions .action-button {
+                              background-color: #fff;
+                              color: #333;
+                              border: none;
+                              padding: 10px 20px;
+                              border-radius: 5px;
+                              cursor: pointer;
+                    }
+
+                    .header .action-icon {
+                              width: 20px;
+                              height: 20px;
+                              margin-left: 5px;
+                    }
+
+                    /*  */
+
+
+                    .franchise-section {
+                              color: #333;
+                              padding: 2rem 0;
+                              background-color: var(--chamoisee);
+
+                    }
+
+                    .franchise-container {
+                              /* border: 1px solid black; */
+                              margin: auto;
+                              padding: 1%;
+                              display: flex;
+                              justify-content: space-evenly;
+                    }
+
+                    .franchise-entry {
+                              box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+                              background-color: var(--tan);
+                              /* border: 1px solid gray; */
+                              /* padding: 0.5em; */
+                              border-radius: 1rem;
+                              flex-basis: 33.33%;
+                              display: flex;
+                              flex-direction: column;
+                              margin: 1rem;
+                    }
+
+                    .franchise-img {
+                              width: 100%;
+                              height: 300px;
+                              border-radius: 1rem;
+                    }
+
+                    .franchise-details {
+                              /* position: absolute; */
+                              /* bottom: 0; */
+                              /* display: flex; */
+                              padding: 1rem;
+                              justify-content: space-between;
+                              align-items: center;
+                              /* text-align:start; */
+                    }
+
+                    .franchise-category {
+                              font-size: 0.875rem;
+                              font-weight: medium;
+                              color: #000;
+                              margin-bottom: 0.25rem;
+                    }
+
+                    .franchise-actions {
+                              display: flex;
+                              justify-content: space-between;
+                              align-items: center;
+                    }
+
+                    .franchise-cta {
+                              color: #5a67d8;
+                              cursor: pointer;
+                              display: flex;
+                              align-items: center;
+                              text-decoration: none;
+                              transition: color 0.3s;
+                    }
+
+                    .franchise-cta:hover {
+                              color: #6578dc;
+                    }
+
+                    .franchise-information {
+                              margin: 3% 3% -2%;
+                              padding: 2%;
+                              /* border: 1px solid black; */
+                              /* display: none; */
+                    }
+
+                    .g-info {
+                              margin: 2%;
+                    }
+
+                    .desc-of-franchise {
+                              display: flex;
+                              gap: 5px;
+                              flex-direction: column;
+                    }
+
+                    .txt {
+                              font-weight: 900;
+                              font-size: large;
+                    }
+
+                    .game-list-and-names {
+                              margin: 0 10%;
+                    }
+
+                    .game-name-list {
+                              padding: 1%;
+                              display: flex;
+                              justify-content: left;
+                    }
+
+                    .span-text-game-name {
+                              margin-left: 5%;
+                              margin-top: 2.5px;
+                    }
+
+                    .line-after-info {
+                              width: 80%;
+                              color: #666;
+                              margin: 5% auto;
+                    }
+          </style>
+</head>
+
+<body>
+          <header class="header">
+                    <div class="header-container">
+
+                              <nav>
+                                        <a href="home.html" class="header-link">home Page</a>
+                                        <a href="drink.html" class="header-link">drinks</a>
+                                        <a href="food.html" class="header-link">food</a>
+                                        <a href="franchise.html" class="header-link">franchises</a>
+                              </nav>
+
+                              <div class="logo">
+                                        <span class="logo-text">Wild Bean's</span>
+                              </div>
+
+                              <div class="actions">
+                                        <a href="book.html" class="action-button">
+                                                  Book Table
+                                        </a>
+                              </div>
+                    </div>
+          </header>
+
+          <main>
+                    <section class="franchise-section">
+                              <div class="franchise-container">
+                                        <div class="franchise-entry">
+
+                                                  <div class="franchise-image" id="franchise-img-1">
+                                                            <img class="franchise-img"
+                                                                      src="image/cafe-1.jpg"
+                                                                      alt="franchise">
+
+
+                                                            <div class="franchise-details" id="franchise-info-1">
+                                                                      <h2 class="franchise-category">franchise 1</h2>
+                                                            </div>
+                                                  </div>
+
+                                                  <div class="franchise-information">
+                                                            <div class="name-of-franchise g-info">
+                                                                      <span class="txt">Name : </span>franchise Name
+                                                            </div>
+
+                                                            <hr class="line-after-info">
+
+                                                            <div class="tkn-price g-info">
+                                                                      <span class="txt">Location : </span> Gir [ Main
+                                                                      Branch ]
+                                                            </div>
+
+                                                            <hr class="line-after-info">
+
+                                                            <div class="desc-of-franchise g-info">
+                                                                      <span class="txt">description : </span>Nestled in
+                                                                      the heart of Gir, Wild Bean's offers a serene
+                                                                      retreat. Savor delightful brews and bites amidst
+                                                                      nature's beauty, creating a perfect blend of
+                                                                      tranquility and indulgence.
+                                                            </div>
+
+                                                            <hr class="line-after-info">
+
+                                                            <div class="age-group g-info">
+                                                                      <span class="txt">Contacts : </span>
+                                                                      <div class="game-list-and-names">
+                                                                                <div class="game-name-list"><svg
+                                                                                                    xmlns="http://www.w3.org/2000/svg"
+                                                                                                    viewBox="0 0 64 64"
+                                                                                                    width="24px"
+                                                                                                    height="24px">
+                                                                                                    <path
+                                                                                                              d="M30.997,28.126l20.738,0.029C53.545,36.731,50.236,54,30.997,54C18.844,54,8.992,44.15,8.992,32s9.852-22,22.005-22	c5.708,0,10.907,2.173,14.817,5.736l-6.192,6.19c-2.321-1.988-5.329-3.196-8.625-3.196c-7.33,0-13.273,5.941-13.273,13.27	s5.942,13.27,13.273,13.27c6.156,0,10.412-3.644,11.978-8.738H30.997V28.126z" />
+                                                                                          </svg><span
+                                                                                                    class="span-text-game-name">ask.wild.beans@gmail.com</span>
+                                                                                </div>
+                                                                                <div class="game-name-list"><span
+                                                                                                    class="material-symbols-outlined">
+                                                                                                    phone
+                                                                                          </span><span
+                                                                                                    class="span-text-game-name">+91
+                                                                                                    87584 99499</span>
+                                                                                </div>
+                                                                                <div class="game-name-list"><svg
+                                                                                                    xmlns="http://www.w3.org/2000/svg"
+                                                                                                    viewBox="0 0 64 64"
+                                                                                                    width="24px"
+                                                                                                    height="24px">
+                                                                                                    <path
+                                                                                                              d="M 31.820312 12 C 13.439312 12 12 13.439312 12 31.820312 L 12 32.179688 C 12 50.560688 13.439312 52 31.820312 52 L 32.179688 52 C 50.560688 52 52 50.560688 52 32.179688 L 52 32 C 52 13.452 50.548 12 32 12 L 31.820312 12 z M 28 16 L 36 16 C 47.129 16 48 16.871 48 28 L 48 36 C 48 47.129 47.129 48 36 48 L 28 48 C 16.871 48 16 47.129 16 36 L 16 28 C 16 16.871 16.871 16 28 16 z M 41.994141 20 C 40.889141 20.003 39.997 20.900859 40 22.005859 C 40.003 23.110859 40.900859 24.003 42.005859 24 C 43.110859 23.997 44.003 23.099141 44 21.994141 C 43.997 20.889141 43.099141 19.997 41.994141 20 z M 31.976562 22 C 26.454563 22.013 21.987 26.501437 22 32.023438 C 22.013 37.545437 26.501437 42.013 32.023438 42 C 37.545437 41.987 42.013 37.498562 42 31.976562 C 41.987 26.454563 37.498562 21.987 31.976562 22 z M 31.986328 26 C 35.299328 25.992 37.992 28.673328 38 31.986328 C 38.007 35.299328 35.326672 37.992 32.013672 38 C 28.700672 38.008 26.008 35.327672 26 32.013672 C 25.992 28.700672 28.673328 26.008 31.986328 26 z" />
+                                                                                          </svg><span
+                                                                                                    class="span-text-game-name">a_lathigara0103</span>
+                                                                                </div>
+                                                                                <div class="game-name-list"><svg
+                                                                                                    xmlns="http://www.w3.org/2000/svg"
+                                                                                                    viewBox="0 0 64 64"
+                                                                                                    width="24px"
+                                                                                                    height="24px">
+                                                                                                    <path
+                                                                                                              d="M 23.773438 12 C 12.855437 12 12 12.854437 12 23.773438 L 12 40.226562 C 12 51.144563 12.855438 52 23.773438 52 L 40.226562 52 C 51.144563 52 52 51.145563 52 40.226562 L 52 23.773438 C 52 12.854437 51.145563 12 40.226562 12 L 23.773438 12 z M 21.167969 16 L 42.832031 16 C 47.625031 16 48 16.374969 48 21.167969 L 48 42.832031 C 48 47.625031 47.624031 48 42.832031 48 L 21.167969 48 C 16.374969 48 16 47.624031 16 42.832031 L 16 21.167969 C 16 16.374969 16.374969 16 21.167969 16 z M 22.501953 18.503906 C 20.872953 18.503906 19.552734 19.824172 19.552734 21.451172 C 19.552734 23.078172 20.871953 24.400391 22.501953 24.400391 C 24.126953 24.400391 25.447266 23.079172 25.447266 21.451172 C 25.447266 19.826172 24.126953 18.503906 22.501953 18.503906 z M 37.933594 26.322266 C 35.473594 26.322266 33.823437 27.672172 33.148438 28.951172 L 33.078125 28.951172 L 33.078125 26.728516 L 28.228516 26.728516 L 28.228516 43 L 33.28125 43 L 33.28125 34.949219 C 33.28125 32.826219 33.687359 30.771484 36.318359 30.771484 C 38.912359 30.771484 38.945312 33.200891 38.945312 35.087891 L 38.945312 43 L 44 43 L 44 34.074219 C 44 29.692219 43.054594 26.322266 37.933594 26.322266 z M 19.972656 26.728516 L 19.972656 43 L 25.029297 43 L 25.029297 26.728516 L 19.972656 26.728516 z" />
+                                                                                          </svg><span
+                                                                                                    class="span-text-game-name">Aryan
+                                                                                                    Lathigara</span>
+                                                                                </div>
+                                                                      </div>
+                                                            </div>
+                                                            
+                                                            <hr class="line-after-info">
+
+                                                            <div class="length g-info">
+                                                                      <span class="txt">Open : </span> Everyday [ 9 AM
+                                                                      to 1PM ]
+                                                            </div>
+
+                                                            <hr class="line-after-info">
+
+                                                  </div>
+
+
+                                        </div>
+
+                                        <div class="franchise-entry">
+
+                                                  <div class="franchise-image" id="franchise-img-1">
+                                                            <img class="franchise-img"
+                                                                      src="image/cafe-2.jpg"
+                                                                      alt="franchise">
+                                                            <div class="franchise-details" id="franchise-info-1">
+                                                                      <h2 class="franchise-category">franchise 2</h2>
+                                                            </div>
+                                                  </div>
+
+                                                  <div class="franchise-information">
+                                                            <div class="name-of-franchise g-info">
+                                                                      <span class="txt">Name : </span>franchise Name
+                                                            </div>
+
+                                                            <hr class="line-after-info">
+
+                                                            <div class="tkn-price g-info">
+                                                                      <span class="txt">Location : </span> Rajkot
+                                                            </div>
+
+                                                            <hr class="line-after-info">
+
+                                                            <div class="desc-of-franchise g-info">
+                                                                      <span class="txt">description : </span>Discover
+                                                                      the essence of Rajkot at our franchise cafe.
+                                                                      Immerse yourself in the vibrant city vibes while
+                                                                      relishing our signature coffees and delectable
+                                                                      treats. An urban oasis of flavor awaits!
+                                                            </div>
+
+                                                            <hr class="line-after-info">
+
+                                                            <div class="age-group g-info">
+                                                                      <span class="txt">Contacts : </span>
+                                                                      <div class="game-list-and-names">
+                                                                                <div class="game-name-list"><svg
+                                                                                                    xmlns="http://www.w3.org/2000/svg"
+                                                                                                    viewBox="0 0 64 64"
+                                                                                                    width="24px"
+                                                                                                    height="24px">
+                                                                                                    <path
+                                                                                                              d="M30.997,28.126l20.738,0.029C53.545,36.731,50.236,54,30.997,54C18.844,54,8.992,44.15,8.992,32s9.852-22,22.005-22	c5.708,0,10.907,2.173,14.817,5.736l-6.192,6.19c-2.321-1.988-5.329-3.196-8.625-3.196c-7.33,0-13.273,5.941-13.273,13.27	s5.942,13.27,13.273,13.27c6.156,0,10.412-3.644,11.978-8.738H30.997V28.126z" />
+                                                                                          </svg><span
+                                                                                                    class="span-text-game-name">ask.wild.beans@gmail.com</span>
+                                                                                </div>
+                                                                                <div class="game-name-list"><span
+                                                                                                    class="material-symbols-outlined">
+                                                                                                    phone
+                                                                                          </span><span
+                                                                                                    class="span-text-game-name">+91
+                                                                                                    87584 99499</span>
+                                                                                </div>
+                                                                                <div class="game-name-list"><svg
+                                                                                                    xmlns="http://www.w3.org/2000/svg"
+                                                                                                    viewBox="0 0 64 64"
+                                                                                                    width="24px"
+                                                                                                    height="24px">
+                                                                                                    <path
+                                                                                                              d="M 31.820312 12 C 13.439312 12 12 13.439312 12 31.820312 L 12 32.179688 C 12 50.560688 13.439312 52 31.820312 52 L 32.179688 52 C 50.560688 52 52 50.560688 52 32.179688 L 52 32 C 52 13.452 50.548 12 32 12 L 31.820312 12 z M 28 16 L 36 16 C 47.129 16 48 16.871 48 28 L 48 36 C 48 47.129 47.129 48 36 48 L 28 48 C 16.871 48 16 47.129 16 36 L 16 28 C 16 16.871 16.871 16 28 16 z M 41.994141 20 C 40.889141 20.003 39.997 20.900859 40 22.005859 C 40.003 23.110859 40.900859 24.003 42.005859 24 C 43.110859 23.997 44.003 23.099141 44 21.994141 C 43.997 20.889141 43.099141 19.997 41.994141 20 z M 31.976562 22 C 26.454563 22.013 21.987 26.501437 22 32.023438 C 22.013 37.545437 26.501437 42.013 32.023438 42 C 37.545437 41.987 42.013 37.498562 42 31.976562 C 41.987 26.454563 37.498562 21.987 31.976562 22 z M 31.986328 26 C 35.299328 25.992 37.992 28.673328 38 31.986328 C 38.007 35.299328 35.326672 37.992 32.013672 38 C 28.700672 38.008 26.008 35.327672 26 32.013672 C 25.992 28.700672 28.673328 26.008 31.986328 26 z" />
+                                                                                          </svg><span
+                                                                                                    class="span-text-game-name">a_lathigara0103</span>
+                                                                                </div>
+                                                                                <div class="game-name-list"><svg
+                                                                                                    xmlns="http://www.w3.org/2000/svg"
+                                                                                                    viewBox="0 0 64 64"
+                                                                                                    width="24px"
+                                                                                                    height="24px">
+                                                                                                    <path
+                                                                                                              d="M 23.773438 12 C 12.855437 12 12 12.854437 12 23.773438 L 12 40.226562 C 12 51.144563 12.855438 52 23.773438 52 L 40.226562 52 C 51.144563 52 52 51.145563 52 40.226562 L 52 23.773438 C 52 12.854437 51.145563 12 40.226562 12 L 23.773438 12 z M 21.167969 16 L 42.832031 16 C 47.625031 16 48 16.374969 48 21.167969 L 48 42.832031 C 48 47.625031 47.624031 48 42.832031 48 L 21.167969 48 C 16.374969 48 16 47.624031 16 42.832031 L 16 21.167969 C 16 16.374969 16.374969 16 21.167969 16 z M 22.501953 18.503906 C 20.872953 18.503906 19.552734 19.824172 19.552734 21.451172 C 19.552734 23.078172 20.871953 24.400391 22.501953 24.400391 C 24.126953 24.400391 25.447266 23.079172 25.447266 21.451172 C 25.447266 19.826172 24.126953 18.503906 22.501953 18.503906 z M 37.933594 26.322266 C 35.473594 26.322266 33.823437 27.672172 33.148438 28.951172 L 33.078125 28.951172 L 33.078125 26.728516 L 28.228516 26.728516 L 28.228516 43 L 33.28125 43 L 33.28125 34.949219 C 33.28125 32.826219 33.687359 30.771484 36.318359 30.771484 C 38.912359 30.771484 38.945312 33.200891 38.945312 35.087891 L 38.945312 43 L 44 43 L 44 34.074219 C 44 29.692219 43.054594 26.322266 37.933594 26.322266 z M 19.972656 26.728516 L 19.972656 43 L 25.029297 43 L 25.029297 26.728516 L 19.972656 26.728516 z" />
+                                                                                          </svg><span
+                                                                                                    class="span-text-game-name">Aryan
+                                                                                                    Lathigara</span>
+                                                                                </div>
+                                                                      </div>
+                                                            </div>
+
+                                                            <hr class="line-after-info">
+
+                                                            <div class="length g-info">
+                                                                      <span class="txt">Open : </span> Everyday [ 9 AM
+                                                                      to 1PM ]
+                                                            </div>
+
+                                                            <hr class="line-after-info">
+
+                                                  </div>
+
+                                        </div>
+                              </div>
+                    </section>
+          </main>
+</body>
+
+</html>

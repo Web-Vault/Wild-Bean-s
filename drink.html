@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Drink Gallery</title>
+          <!-- <link rel="stylesheet" type="text/css" href="styles.css"> -->
+
+          <style>
+                    :root {
+                              --almond: #ede0d4ff;
+                              --dun: #e6ccb2ff;
+                              --tan: #ddb892ff;
+                              --chamoisee: #b08968ff;
+                              --coffee: #7f5539ff;
+                              --raw-umber: #9c6644ff;
+                    }
+
+
+                    * {
+                              margin: 0;
+                              padding: 0;
+                    }
+
+
+                    .header {
+                              background-color: var(--coffee);
+                              color: #fff;
+                              padding: 15px 0;
+                              text-align: center;
+                    }
+
+                    .header-container {
+                              display: flex;
+                              justify-content: space-between;
+                              align-items: center;
+                              padding: 0 20px;
+                    }
+
+                    .header nav {
+                              display: flex;
+                              gap: 20px;
+                    }
+
+                    .header .header-link {
+                              text-decoration: none;
+                              color: #fff;
+                              font-weight: 600;
+                    }
+
+                    .header .logo {
+                              display: flex;
+                              align-items: center;
+                    }
+
+                    .header .logo-text {
+                              font-size: 1.5rem;
+                              font-weight: 600;
+                    }
+
+                    .header .actions .action-button {
+                              background-color: #fff;
+                              color: #222;
+                              border: none;
+                              padding: 10px 20px;
+                              border-radius: 5px;
+                              cursor: pointer;
+                    }
+
+                    /*  */
+
+                    /* styles.css */
+                    .section {
+                              background-color: var(--tan);
+                              color: #333;
+                              padding: 60px 0;
+                    }
+
+                    .hero-container {
+                              margin: 0 auto;
+                              padding: 0 10%;
+                    }
+
+                    .flex-container {
+                              display: flex;
+                              flex-wrap: wrap;
+                              margin: -10px;
+                    }
+
+                    .col-50 {
+                              width: 50%;
+                              padding: 10px;
+                              box-sizing: border-box;
+                              text-align: center;
+                    }
+
+                    .image-container {
+                              border-radius: 8px;
+                              overflow: hidden;
+                              height: 320px;
+                              margin: 0 auto;
+                    }
+
+                    .image {
+                              object-fit: cover;
+                              object-position: center;
+                              width: 100%;
+                              height: 100%;
+                    }
+
+                    .section-title {
+                              font-size: 24px;
+                              font-weight: 600;
+                              margin-top: 20px;
+                              margin-bottom: 10px;
+                    }
+
+                    .section-description {
+                              font-size: 16px;
+                              line-height: 1.5;
+                    }
+
+                    .btn {
+                              display: inline-block;
+                              margin-top: 20px;
+                              padding: 10px 20px;
+                              background-color: var(--raw-umber);
+                              color: #fff;
+                              border: none;
+                              border-radius: 4px;
+                              cursor: pointer;
+                              transition: background-color 0.3s;
+                              /* text-decoration: none; */
+                    }
+
+                    .btn:hover {
+                              background-color: var(--coffee);
+                    }
+
+                    /*  */
+
+                    /* styles.css */
+                    .drink-section {
+                              background-color: var(--chamoisee);
+                              color: #000;
+                              padding: 60px 0;
+                    }
+
+                    .drink-container {
+                              max-width: 1200px;
+                              margin: 0 auto;
+                              padding: 0 15px;
+                              display: flex;
+                    }
+
+                    .blog-card {
+                              width: 33.33%;
+                              padding: 4px;
+                              box-sizing: border-box;
+                    }
+
+                    .card-image-container {
+                              border-radius: 8px;
+                              overflow: hidden;
+                              height: 320px;
+                              margin: 0 auto;
+                    }
+
+                    .card-image {
+                              object-fit: cover;
+                              object-position: center;
+                              width: 100%;
+                              height: 100%;
+                    }
+
+                    .category {
+                              font-size: 12px;
+                              font-weight: 600;
+                    }
+
+                    .card-title {
+                              font-size: 20px;
+                              font-weight: 600;
+                              margin-top: 10px;
+                              margin-bottom: 20px;
+                    }
+
+                    .card-description {
+                              font-size: 16px;
+                              line-height: 1.5;
+                    }
+
+                    .card-actions {
+                              display: flex;
+                              align-items: center;
+                              flex-wrap: wrap;
+                    }
+
+                    .learn-more-button {
+                              display: inline-block;
+                              margin-top: 10px;
+                              padding: 10px 20px;
+                              background-color: var(--raw-umber);
+                              color: #fff;
+                              border: none;
+                              border-radius: 4px;
+                              cursor: pointer;
+                              transition: background-color 0.3s;
+                    }
+
+                    .learn-more-button:hover {
+                              background-color: var(--coffee);
+                    }
+          </style>
+</head>
+
+<body>
+          <header class="header">
+                    <div class="header-container">
+                              <nav>
+                                        <a href="home.html" class="header-link">home Page</a>
+                                        <a href="drink.html" class="header-link">drinks</a>
+                                        <a href="food.html" class="header-link">food</a>
+                                        <a href="franchise.html" class="header-link">franchises</a>
+                              </nav>
+                              <div class="logo">
+                                        <span class="logo-text">Wild Bean's</span>
+                              </div>
+                              <div class="actions">
+                                        <a href="book.html" class="action-button">
+                                                  Book Table
+                                        </a>
+                              </div>
+                    </div>
+          </header>
+
+          <!--  -->
+
+          <section class="section">
+                    <div class="hero-container">
+                              <div class="flex-container">
+                                        <div class="col-50">
+                                                  <div class="image-container">
+                                                            <img alt="content" class="image"
+                                                                      src="image/main-hot-drink-image.png">
+                                                  </div>
+                                                  <h2 class="section-title">Buy Hot Drinks</h2>
+                                                  <p class="section-description">Indulge in warmth and comfort with our
+                                                            hot chocolate, a velvety embrace of rich cocoa goodness. Or,
+                                                            explore our aromatic teas for a soothing escape into
+                                                            relaxation.</p>
+                                                  <a href="hot.html" class="btn">Check Out Someting Hot...</a>
+                                        </div>
+                                        <div class="col-50">
+                                                  <div class="image-container">
+                                                            <img alt="content" class="image"
+                                                                      src="image/main-cold-drink-image.png">
+                                                  </div>
+                                                  <h2 class="section-title">Buy Something Cold</h2>
+                                                  <p class="section-description">Chill out with our refreshing cold
+                                                            coffee—bold, invigorating, and the perfect companion for a
+                                                            cool, delightful moment.</p>
+                                                  <a href="#drink-section" class="btn">Check Out Someting Cold...</a>
+                                        </div>
+                              </div>
+                    </div>
+          </section>
+
+          <!--  -->
+
+          <section class="drink-section">
+                    <div class="drink-container">
+                              <div class="blog-card">
+                                        <div class="card-image-container">
+                                                  <img class="card-image" src="image/cold-coffee-for-drink1.jpg"
+                                                            alt="blog">
+                                        </div>
+                                        <div class="card-content">
+                                                  <h2 class="category">Cold Coffee</h2>
+                                                  <h1 class="card-title">Drink 1</h1>
+                                                  <p class="card-description">Quench your thirst with our signature cold
+                                                            coffee—a harmonious blend of robust espresso, chilled to
+                                                            perfection for a bold and invigorating pick-me-up.</p>
+                                                  <div class="card-actions">
+                                                            <a href="purchase.html" class="learn-more-button">Grab It.
+                                                            </a>
+                                                  </div>
+                                        </div>
+                              </div>
+                              <div class="blog-card">
+                                        <div class="card-image-container">
+                                                  <img class="card-image" src="image/cold-coco-for-drink2.jpg"
+                                                            alt="blog">
+                                        </div>
+                                        <div class="card-content">
+                                                  <h2 class="category">Cold Choco</h2>
+                                                  <h1 class="card-title">Drink 2</h1>
+                                                  <p class="card-description">Dive into indulgence with our cold
+                                                            chocolate, a luscious symphony of rich cocoa, served chilled
+                                                            for a decadent and refreshing chocolatey escape.</p>
+                                                  <div class="card-actions">
+                                                            <a href="purchase.html" class="learn-more-button">Grab it
+                                                            </a>
+                                                  </div>
+                                        </div>
+                              </div>
+                              <div class="blog-card">
+                                        <div class="card-image-container">
+                                                  <img class="card-image" src="image/ice-tea-for-drink3.jpg"
+                                                            alt="blog">
+                                        </div>
+                                        <div class="card-content">
+                                                  <h2 class="category">Ice Tea</h2>
+                                                  <h1 class="card-title">Drink 3</h1>
+                                                  <p class="card-description">Sip on serenity with our iced tea
+                                                            collection—crisp, cool, and infused with a medley of flavors
+                                                            for a revitalizing and thirst-quenching experience.</p>
+                                                  <div class="card-actions">
+                                                            <a href="purchase.html" class="learn-more-button">Grab
+                                                                      It</a>
+                                                  </div>
+                                        </div>
+                              </div>
+                    </div>
+          </section>
+</body>
+
+</html>
